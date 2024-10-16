@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - Individual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            background-color: blue;
+            color: white;
+            padding: 10px;yr
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .row div {
+            flex: 1;
+            padding: 5px;
+        }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        .bold-italic {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Individual Application Form</h2>
+
+<form id="applicationForm" action="https://script.google.com/macros/s/AKfycbzpFtuluB0g1cGhD4Lh5wTrz2QkOOzRFupLKaIm-7Ny8UEeRGA0EslTA2GPwASkcdZVwg/exec" method="POST">
+
+    
+    <!-- PERSONAL DETAILS -->
+    <div class="section">
+        <h3>1. PERSONAL DETAILS</h3>
+
+        <!-- Name as ID Proof -->
+        <label for="name-id">Name (same as ID proof):</label>
+        <div class="row">
+            <div><input type="text" name="prefix_name_id" placeholder="Prefix" required></div>
+            <div><input type="text" name="first_name_id" placeholder="First Name" required></div>
+            <div><input type="text" name="middle_name_id" placeholder="Middle Name"></div>
+            <div><input type="text" name="last_name_id" placeholder="Last Name" required></div>
+        </div>
+
+        <!-- Maiden Name -->
+        <label for="maiden-name">Maiden Name:</label>
+        <div class="row">
+            <div><input type="text" name="prefix_maiden" placeholder="Prefix"></div>
+            <div><input type="text" name="first_name_maiden" placeholder="First Name"></div>
+            <div><input type="text" name="middle_name_maiden" placeholder="Middle Name"></div>
+            <div><input type="text" name="last_name_maiden" placeholder="Last Name"></div>
+        </div>
+
+        <!-- Father/Spouse Name -->
+        <label for="father-spouse-name">Father/Spouse Name:</label>
+        <div class="row">
+            <div><input type="text" name="prefix_father_spouse" placeholder="Prefix"></div>
+            <div><input type="text" name="first_name_father_spouse" placeholder="First Name"></div>
+            <div><input type="text" name="middle_name_father_spouse" placeholder="Middle Name"></div>
+            <div><input type="text" name="last_name_father_spouse" placeholder="Last Name"></div>
+        </div>
+
+        <!-- Mother Name -->
+        <label for="mother-name">Mother Name:</label>
+        <div class="row">
+            <div><input type="text" name="prefix_mother" placeholder="Prefix"></div>
+            <div><input type="text" name="first_name_mother" placeholder="First Name"></div>
+            <div><input type="text" name="middle_name_mother" placeholder="Middle Name"></div>
+            <div><input type="text" name="last_name_mother" placeholder="Last Name"></div>
+        </div>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <!-- Gender -->
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="others"> Others
+        <br><br>
+
+       
+        <!-- Marital Status -->
+        <label for="marital-status">Marital Status:</label>
+        <input type="radio" name="marital_status" value="married" required> Married
+        <input type="radio" name="marital_status" value="unmarried"> Unmarried
+        <br><br>
+
+        <!-- Citizenship -->
+        <label for="citizenship">Citizenship:</label>
+        <input type="radio" name="citizenship" value="indian" required> Indian
+        <input type="radio" name="citizenship" value="other"> Other
+        <br><br>
+
+        <!-- Residential Status -->
+        <label for="residential-status">Residential Status:</label>
+        <input type="radio" name="residential_status" value="resident_individual" required> Resident Individual
+        <input type="radio" name="residential_status" value="nri"> Non Resident Indian
+        <input type="radio" name="residential_status" value="foreign"> Foreign
+        <input type="radio" name="residential_status" value="personal_individual_orgin"> Personal Individual Origin
+    </div>
+
+    <!-- PROOF OF IDENTITY AND ADDRESS -->
+    <div class="section">
+        <h3>2. PROOF OF IDENTITY AND ADDRESS</h3>
+        <label for="passport-number">Passport Number:</label>
+        <input type="text" name="passport_number">
+        <label for="passport-expiry">Passport Expiry Date:</label>
+        <input type="date" name="passport_expiry">
+
+        <label for="voter-id">Voter ID Card:</label>
+        <input type="text" name="voter_id">
+
+
+         <!-- Aadhar -->
+        <label for="Aadhaar">Adhaar:</label>
+        <input type="text" name="adhaar" required>
+        
+        <label for="driving-license">Driving License:</label>
+        <input type="text" name="driving_license">
+        <label for="driving-license-expiry">Driving License Expiry Date:</label>
+        <input type="date" name="driving_license_expiry">
+        
+
+        
+
+        <label class="bold-italic" for="address">Address (For other than resident individual, please mention overseas address):</label>
+        <input type="text" name="address_line_1" placeholder="Line 1">
+        <input type="text" name="address_line_2" placeholder="Line 2">
+        <input type="text" name="address_line_3" placeholder="Line 3">
+        <div class="row">
+            <div><input type="text" name="city" placeholder="City/Town/Village"></div>
+            <div><input type="text" name="district" placeholder="District"></div>
+            <div><input type="text" name="pin" placeholder="Pin/Post Code"></div>
+            <div><input type="text" name="state_ut" placeholder="State/U.T Code"></div>
+        </div>
+    </div>
+
+    <!-- BANK ACCOUNT DETAILS -->
+    <div class="section">
+        <h3>3. BANK ACCOUNT DETAILS</h3>
+        <input type="checkbox" name="same_address" value="same_address"> Same as above mentioned address (in such cases, details as below need not be provided)
+        <br><br>
+        <label for="account-holder-name">Account Holder Name:</label>
+        <input type="text" name="account_holder_name">
+
+        <label for="account-number">Account Number:</label>
+        <input type="text" name="account_number">
+
+        <label for="bank-name">Bank Name:</label>
+        <input type="text" name="bank_name">
+
+        <label for="branch">Branch:</label>
+        <input type="text" name="branch">
+
+        <label for="ifsc-code">IFSC Code:</label>
+        <input type="text" name="ifsc_code">
+
+        
+        <!-- PAN -->
+        <label for="pan">PAN:</label>
+        <input type="text" name="pan" required> 
+    </div>
+
+    <!-- CONTACT DETAILS -->
+    <div class="section">
+        <h3>4. CONTACT DETAILS</h3>
+        <label for="tell-off">Tell. (Off):</label>
+        <input type="text" name="tell_off">
+        <label for="tell-res">Tell (Res):</label>
+        <input type="text" name="tell_res">
+        <label for="mobile">Mobile:</label>
+        <input type="text" name="mobile" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" name="email" required>
+    </div>
+
+    <!-- REMARKS -->
+    <div class="section">
+        <h3>5. Remarks (if any)</h3>
+        <textarea name="remarks" rows="4"></textarea>
+    </div>
+
+    <!-- APPLICANT DECLARATION -->
+    <div class="section">
+        <h3>6. Applicant Declaration</h3>
+        <p>I hereby declare that the details furnished above are true and correct to the best of my knowledge/belief and I undertake to inform you of any changes therein, immediately. In case any of the above information is found to be false or untrue or misleading or misrepresenting, I am aware that I may be held liable for it.</p>
+        <label for="date">Date:</label>
+        <input type="date" name="declaration_date" required>
+        <label for="place">Place:</label>
+        <input type="text" name="place" required>
+    </div>
+
+    <input type="submit" value="Submit Application">
+</form>
+
+
+</body>
+</html>
+
